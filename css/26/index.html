@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div>button{
+      margin-left: 100px;
+    }
+        
+    
+  .peddi{
+        width:0;
+        height:40px;
+        background-color: red;
+        visibility: hidden;
+        transition: width 5s;
+ }
+ .one:hover~.peddi{
+    visibility: visible;
+    width:100px; 
+    }
+    .one:hover~.peddi::after{
+        content: "25";
+    }
+    .two:hover~.peddi{
+        visibility: visible;
+        width:200px;
+    }
+    .two:hover~.peddi::after{
+        content: "50";
+    }
+    .three:hover~.peddi{
+        visibility: visible;
+        width:400px;
+    }
+    .three:hover~.peddi::after{
+        content: "100";
+    }
+</style>
+<body>
+    
+    <div>
+        <button class="one">25</button>
+        <button class="two">50</button>
+        <button class="three">100</button>
+        <h1 class="peddi"></h1>
+    </div>
+</body>
+</html>
